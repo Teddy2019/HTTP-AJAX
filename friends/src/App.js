@@ -1,6 +1,7 @@
 import React from 'react';
-import axios from "axios";
+import axios from 'axios';
 import './App.css';
+import Friends from './components/Friends'
 
 class App extends React.Component {
   constructor() {
@@ -11,7 +12,7 @@ class App extends React.Component {
   }
 
   componentDidMount(){
-    axios.get ('http://http://localhost:5000/friends')
+    axios.get ('http://localhost:5000/friends')
     .then(response =>  {this.setState({friends: response.data})})
     .catch(err => {console.log('Error:', err)})
   }
@@ -19,7 +20,7 @@ class App extends React.Component {
   render(){
   return (
     <div className="App">
-      
+      {this.state.friends.map((friend) => {return <Friends friend = {friend} />})}
     </div>
   );}
 }
