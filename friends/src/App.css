@@ -1,3 +1,26 @@
 .App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
+  margin: 0 auto;
+}
+
+.Friend {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 50px;
+  margin: 2%;
+  padding: 2%;
+  box-shadow: 10px 10px rgb(196, 194, 194);
+  border: 1.4px solid black;
+}
+
+.List {
+  width: 80%;
+  color: aliceblue;
+  padding: 2%;
+  background: rgb(124, 124, 241);
 }
