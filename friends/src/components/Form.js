@@ -3,7 +3,7 @@ import React from 'react';
 class Form extends React.Component {
     constructor(){
         super();
-        this.state ={
+        this.state = {
             id: '',
             name: '',
             age: '',
@@ -12,11 +12,10 @@ class Form extends React.Component {
     }
 render(){
     return (
-        <form>
-             Id:   <input /> <br />
-             Name: <input /> <br />
-             Age:  <input /> <br />
-             Email: <input /><br />
+        <form className='Form' >
+             <input placeholder='name' /> <br /><br />
+             <input placeholder='age' /> <br /><br />
+             <input placeholder='email' /><br /><br />
         </form>
     )
 }

@@ -20,7 +20,22 @@
 
 .List {
   width: 80%;
-  color: aliceblue;
   padding: 2%;
   background: rgb(124, 124, 241);
+}
+
+.Header {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: aliceblue;
+  padding: 2%;
+}
+
+.Edit {
+  text-decoration: none;
+  border: 1px solid white;
+  box-shadow: 10px 10px rgb(196, 194, 194);
+  margin: 1%;
+  padding: 0.4%;
+  background: white;
 }
