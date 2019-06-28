@@ -6,7 +6,7 @@ class EditForm extends React.Component {
         super(props);
         this.state = {
             name: '',
-            age: '',
+            age: 0,
             email: '',
             errorMessage: null
         }
@@ -59,7 +59,7 @@ deleteFriend = (e) => {
 
     const id = this.props.match.params.id
 
-    axios.delete(`http://localhost:3333/items/${id}`)
+    axios.delete(`http://localhost:5000/friends/${id}`)
         .then((response) => {
             this.setState({
                 errorMessage: null

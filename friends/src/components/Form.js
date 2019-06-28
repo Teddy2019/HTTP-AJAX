@@ -6,7 +6,7 @@ class Form extends React.Component {
         super(props);
         this.state = {
             name: '',
-            age: '',
+            age: 0,
             email: '',
             errorMessage: null
         }
@@ -18,8 +18,8 @@ changeHandeler = (e) => {
 
 addNewFriend = (e) => {
 
-    const {name, age, email} = this.state;
-    const payload = {name, age, email};
+    //const {name, age, email} = this.state;
+    const payload = {name: this.state.name, age: this.state.age, email:this.state.email};
     e.preventDefault();
     axios.post('http://localhost:5000/friends', payload)
 			.then((response) => {
