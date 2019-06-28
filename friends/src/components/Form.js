@@ -10,12 +10,18 @@ class Form extends React.Component {
             email: ''
         }
     }
+
+changeHandeler = (e) => {
+    this.setState({[e.target.name] : e.target.value})
+}  
 render(){
     return (
         <form className='Form' >
-             <input placeholder='name' /> <br /><br />
-             <input placeholder='age' /> <br /><br />
-             <input placeholder='email' /><br /><br />
+             <input type='text' name='name'  placeholder='name' value={this.state.name} onChange={this.changeHandeler} /> <br /><br />
+             <input type='text' name='age'  placeholder='age' value={this.state.age} onChange={this.changeHandeler} /> <br /><br />
+             <input type='text' name='email'  placeholder='email' value={this.state.email} onChange={this.changeHandeler} /><br /><br />
+             <button>submit</button>
+             
         </form>
     )
 }

@@ -39,3 +39,12 @@
   padding: 0.4%;
   background: white;
 }
+
+.Form {
+  width: 30%;
+  background: aqua;
+  padding: 2%;
+  border: 1.4px solid black;
+  margin-top: 10%;
+  border-radius: 10%;
+}
