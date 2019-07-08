@@ -37,7 +37,7 @@ updateFriend = (e) => {
     const {name, age, email} = this.state;
     const payload = {name, age, email};
     e.preventDefault();
-    axios.post(`http://localhost:5000/friends/${id}`, payload)
+    axios.put(`http://localhost:5000/friends/${id}`, payload)
 			.then((response) => {
 				this.setState({
 					errorMessage: null
@@ -58,14 +58,15 @@ deleteFriend = (e) => {
     e.preventDefault()
 
     const id = this.props.match.params.id
-
+    console.log(id)
     axios.delete(`http://localhost:5000/friends/${id}`)
         .then((response) => {
             this.setState({
                 errorMessage: null
             })
 
-            this.props.updateItems(response.data)
+            this.props.updateFriends(response.data)
+            console.log (response.data);
             this.props.history.push('/')
         })
         .catch((err) => {
@@ -82,7 +83,7 @@ render(){
              <input type='text' name='age'  placeholder='age' value={this.state.age} onChange={this.changeHandeler} /> <br /><br />
              <input type='text' name='email'  placeholder='email' value={this.state.email} onChange={this.changeHandeler} /><br /><br />
              <button type="submit">Update</button>
-             <button onClick={this.deleteFriend}>Delete</button>
+             <button type='button' onClick={this.deleteFriend}>Delete</button>
              
         </form>
     )
