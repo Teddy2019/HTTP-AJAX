@@ -1,0 +1,50 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.Friend {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 50px;
+  margin: 2%;
+  padding: 2%;
+  box-shadow: 10px 10px rgb(196, 194, 194);
+  border: 1.4px solid black;
+}
+
+.List {
+  width: 80%;
+  padding: 2%;
+  background: rgb(124, 124, 241);
+}
+
+.Header {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: aliceblue;
+  padding: 2%;
+}
+
+.Edit {
+  text-decoration: none;
+  border: 1px solid white;
+  box-shadow: 10px 10px rgb(196, 194, 194);
+  margin: 1%;
+  padding: 0.4%;
+  background: white;
+}
+
+.Form {
+  width: 30%;
+  background: aqua;
+  padding: 2%;
+  border: 1.4px solid black;
+  margin-top: 10%;
+  border-radius: 10%;
+}
